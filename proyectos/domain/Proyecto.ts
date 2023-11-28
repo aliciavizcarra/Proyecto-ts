@@ -1,4 +1,4 @@
 export default interface Proyecto {
-    id?: string;
+    id?:string;
     name: string;
 }
