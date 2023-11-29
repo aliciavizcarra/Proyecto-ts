@@ -1,7 +1,8 @@
+import Proyecto from "../domain/Proyecto";
 import ProyectoRepository from "../domain/Proyecto.repository";
 
 
-export class ProyectoUserCases {
+export class ProyectoUseCases {
 
     private proyectoRepository : ProyectoRepository;
 
@@ -15,6 +16,10 @@ export class ProyectoUserCases {
 
     async getProyectById(id: string){
         return await this.proyectoRepository.getProyectById(id)
+    }
+
+    async createProyect(proyect: Proyecto){
+        return await this.proyectoRepository.createProyect(proyect)
     }
 
 }
