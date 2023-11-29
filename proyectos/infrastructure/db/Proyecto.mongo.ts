@@ -36,7 +36,7 @@ export default class ProyectoRepositoryMongoDB implements ProyectoRepository{
         if (!proyectFromBD) return undefined;
         const proyect : Proyecto = {
             id: String(proyectFromBD._id),
-            name: proyectFromBD.name,
+            name: proyectFromBD.name
         };
         return proyect;
     }
