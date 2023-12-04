@@ -22,6 +22,7 @@ export default class ProyectoRepositoryMongoDB implements ProyectoRepository{
             const proyect : Proyecto = {
                 id: String(proyectFromBD._id),
                 name: proyectFromBD.name,
+                tareas: proyectFromBD.tareas //AQUI HAY QUE AÑADIR LO DE LAS TAREAS 
             };
             return proyect;
         });
@@ -36,7 +37,8 @@ export default class ProyectoRepositoryMongoDB implements ProyectoRepository{
         if (!proyectFromBD) return undefined;
         const proyect : Proyecto = {
             id: String(proyectFromBD._id),
-            name: proyectFromBD.name
+            name: proyectFromBD.name,
+            tareas:proyectFromBD.tareas
         };
         return proyect;
     }
